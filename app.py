@@ -74,7 +74,7 @@ if pregunta:
                 # Pedir código al LLM
                 prompt = f"{contexto_datos}\n\nPregunta del usuario: {pregunta}"
                 respuesta_llm = cliente.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=[{"role": "user", "content": prompt}],
                 )
                 codigo = respuesta_llm.choices[0].message.content.strip()

@@ -91,7 +91,7 @@ if pregunta:
                 Si hay números, formatéalos bien. Máximo 3 párrafos..
                 """
                 respuesta_final = cliente.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=[{"role": "user", "content": prompt_final}],
                 )
                 respuesta_texto = respuesta_final.choices[0].message.content
